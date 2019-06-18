@@ -1,0 +1,10 @@
+module testbench ();
+
+	
+    timeunit 10ns;  // how long one unit of time is
+
+    timeprecision 1ns;
+
+    // inputs
+    logic Clk, Reset;
+	 logic AES_START, AES_DONE;

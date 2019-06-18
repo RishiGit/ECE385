@@ -1,0 +1,133 @@
+module AES_CONTROL(input logic CLK, Reset,
+							output logic [3:0] c1;
+							output logic [1:0] c2;
+							output logic [1:0] c3;
+							output logic [1:0] c4);
+	
+	
+	enum logic [3:0] {Halted, first,
+								second, third,
+								fourth, fifth,
+								sixth, seventh,
+								eight, nineth,
+								tenth, last}   State, Next_state;
+		
+		
+		logic start=AES_START;						
+		logic [3:0] c1;
+		logic [1:0] c2;
+		logic [1:0] c3;
+		logic [1:0] c4;
+		logic LD_S;
+		always_ff @ (posedge CLK)
+			begin
+				if (Reset) 
+					State <= Halted;
+				else 
+					State <= Next_state;
+			end
+		
+		always_comb
+			begin
+				Next_state = State;
+				//start = 0;
+				c1 = 4'b0000;
+				c2 = 2'b00;
+				c3 = 2'b00;
+				c4 = 2'b00;
+				
+				unique case(State)
+					Halted:
+						if(start)
+							Next_state = first;
+						else
+							Next_state = Halted;
+					first:
+						//do first add round key
+						Next_state = second;
+					second:
+						if(c2<2'b11)
+							c2=c2+1;
+							c2 = 2'b00;
+							Next_state = second;
+						else
+							Next_state = third;
+					third:
+						if(c2<2'b11)
+							c2=c2+1;
+							c2 = 2'b00;
+							Next_state = third;
+						else
+							c2 = 2'b00;
+							Next_state = fourth;
+					fourth:
+						if(c2<2'b11)
+							c2=c2+1;
+							Next_state = fourth;
+						else
+							c2 = 2'b00;
+							Next_state = fifth;
+					fifth:
+						if(c2<2'b11)
+							c2=c2+1;
+							Next_state = fifth;
+						else
+							c2 = 2'b00;
+							Next_state = sixth;
+					sixth:
+						if(c2<2'b11)
+							c2=c2+1;
+							Next_state = sixth;
+						else
+							c2 = 2'b00;
+							Next_state = seventh;
+					seventh:
+						if(c2<2'b11)
+							c2=c2+1;
+							Next_state = seventh;
+						else
+							c2 = 2'b00;
+							Next_state = eight;
+					eigth:
+						if(c2<2'b11)
+							c2=c2+1;
+							Next_state = eigth;
+						else
+							c2 = 2'b00;
+							Next_state = nineth;
+					nineth:
+						if(c2<2'b11)
+							c2=c2+1;
+							Next_state = nineth;
+						else
+							c2 = 2'b00;
+							Next_state = tenth;
+					tenth:
+						if(c2<2'b11)
+							c2=c2+1;
+							Next_state = tenth;
+						else
+							c2 = 2'b00;
+							Next_state = last;
+					last:
+						if(c2<2'b10)
+							c2=c2+1;
+							Next_state = last;
+						else
+							c2 = 2'b00;
+							AES_DONE = 1;
+							Next_state = Halted;
+					default : ;
+				endcase
+				
+				case(State)
+					Halted: ;
+					first:
+						//first add round key1
+						temp_msg = temp_msg ^ keyS[1407:1280];
+					second:
+						ARK = temp_msg ^ keyS[1279:1142];
+				endcase
+						
+		
+endmodule

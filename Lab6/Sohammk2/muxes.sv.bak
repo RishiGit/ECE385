@@ -1,0 +1,31 @@
+module mux_PC(input logic [15:0] A, B, C,
+				  input logic [1:0] S,
+				  output logic [15:0] Out);
+		
+		always_comb
+			begin
+				case(S)
+					2'b00:
+						Out = A;
+					2'b01:
+						Out = B;
+					2'b10:
+						Out = C;
+				endcase
+			end
+endmodule
+
+module mux_MDR(input logic [15:0] A, B,
+				  input logic S,
+				  output logic [15:0] Out);
+		
+		always_comb
+			begin
+				case(S)
+					1'b0:
+						Out = A;
+					2'b1:
+						Out = B;
+				endcase
+			end
+endmodule

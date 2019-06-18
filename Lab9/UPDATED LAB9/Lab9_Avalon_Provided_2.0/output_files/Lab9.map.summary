@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Apr 03 19:43:56 2019
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : Lab9
+Top-level Entity Name : AES
+Family : Cyclone IV E
+Total logic elements : 2,789
+    Total combinational functions : 2,693
+    Dedicated logic registers : 287
+Total registers : 287
+Total pins : 388
+Total virtual pins : 0
+Total memory bits : 114,688
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

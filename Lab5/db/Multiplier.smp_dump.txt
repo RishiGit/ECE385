@@ -1,0 +1,22 @@
+
+State Machine - |Processor|control:controllogic|curr
+Name curr.eightS curr.eightAdd curr.seventhS curr.seventhAdd curr.sixthS curr.sixthAdd curr.fifthS curr.fifthAdd curr.fourthS curr.fourthAdd curr.thirdS curr.thirdAdd curr.secondS curr.secondAdd curr.firstS curr.firstAdd curr.rerun curr.hold curr.execute 
+curr.execute 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+curr.hold 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+curr.rerun 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+curr.firstAdd 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+curr.firstS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+curr.secondAdd 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+curr.secondS 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+curr.thirdAdd 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+curr.thirdS 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+curr.fourthAdd 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+curr.fourthS 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+curr.fifthAdd 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+curr.fifthS 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+curr.sixthAdd 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+curr.sixthS 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+curr.seventhAdd 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+curr.seventhS 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+curr.eightAdd 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+curr.eightS 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

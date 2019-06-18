@@ -1,0 +1,10 @@
+Using cable "USB-Blaster [USB-0]", device 1, instance 0x00
+Processor is already paused
+Reading System ID at address 0x000000C0: 
+    ID value was not verified: value was not specified
+    Timestamp value was not verified: value was not specified
+Initializing CPU cache (if present)
+OK
+Downloading 08000000 ( 0%)Downloading 08010000 (80%)Downloading 08013F20 (91%)Downloaded 80KB in 0.9s (88.8KB/s)
+Verifying 08000000 ( 0%)Verifying 08010000 (80%)Verifying 08013F20 (91%)Verified OK                         
+Starting processor at address 0x08000230

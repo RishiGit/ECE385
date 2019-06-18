@@ -1,0 +1,228 @@
+Analysis & Elaboration report for Lab9
+Mon Apr 01 23:17:27 2019
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
+  6. Analysis & Elaboration Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                   ;
++------------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status      ; Failed - Mon Apr 01 23:17:27 2019           ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; Lab9                                        ;
+; Top-level Entity Name              ; AES                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                            ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; AES                ; Lab9               ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Mon Apr 01 23:17:16 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab9 -c Lab9 --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 3 design units, including 3 entities, in source file subbytes.sv
+    Info (12023): Found entity 1: SubBytes File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/SubBytes.sv Line: 14
+    Info (12023): Found entity 2: InvSubBytes File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/SubBytes.sv Line: 93
+    Info (12023): Found entity 3: InvSubMsg File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/SubBytes.sv Line: 169
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_top.sv
+    Info (12023): Found entity 1: lab9_top File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/lab9_top.sv Line: 11
+Info (12021): Found 3 design units, including 3 entities, in source file keyexpansion.sv
+    Info (12023): Found entity 1: KeyExpansion File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/KeyExpansion.sv Line: 13
+    Info (12023): Found entity 2: KeyExpansionOne File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/KeyExpansion.sv Line: 41
+    Info (12023): Found entity 3: AddRoundKey File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/KeyExpansion.sv Line: 71
+Info (12021): Found 1 design units, including 1 entities, in source file invshiftrows.sv
+    Info (12023): Found entity 1: InvShiftRows File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/InvShiftRows.sv Line: 2
+Info (12021): Found 5 design units, including 5 entities, in source file invmixcolumns.sv
+    Info (12023): Found entity 1: InvMixColumns File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/InvMixColumns.sv Line: 14
+    Info (12023): Found entity 2: GF_Mul_9 File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/InvMixColumns.sv Line: 74
+    Info (12023): Found entity 3: GF_Mul_b File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/InvMixColumns.sv Line: 93
+    Info (12023): Found entity 4: GF_Mul_d File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/InvMixColumns.sv Line: 112
+    Info (12023): Found entity 5: GF_Mul_e File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/InvMixColumns.sv Line: 131
+Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
+    Info (12023): Found entity 1: hexdriver File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/hexdriver.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file avalon_aes_interface.sv
+    Info (12023): Found entity 1: avalon_aes_interface File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/avalon_aes_interface.sv Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file aes.sv
+    Info (12023): Found entity 1: AES File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/AES.sv Line: 10
+Info (12021): Found 5 design units, including 5 entities, in source file muxes.sv
+    Info (12023): Found entity 1: four_one File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/muxes.sv Line: 1
+    Info (12023): Found entity 2: four_one32 File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/muxes.sv Line: 20
+    Info (12023): Found entity 3: one_four32 File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/muxes.sv Line: 39
+    Info (12023): Found entity 4: counter File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/muxes.sv Line: 63
+    Info (12023): Found entity 5: keycounter File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/muxes.sv Line: 79
+Info (12021): Found 6 design units, including 6 entities, in source file registers.sv
+    Info (12023): Found entity 1: reg_8 File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/registers.sv Line: 1
+    Info (12023): Found entity 2: reg_4 File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/registers.sv Line: 25
+    Info (12023): Found entity 3: reg_16 File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/registers.sv Line: 49
+    Info (12023): Found entity 4: reg_128 File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/registers.sv Line: 73
+    Info (12023): Found entity 5: eightreg_16 File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/registers.sv Line: 97
+    Info (12023): Found entity 6: flip_flop File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/registers.sv Line: 182
+Info (12021): Found 1 design units, including 1 entities, in source file aes_control.sv
+    Info (12023): Found entity 1: AES_CONTROL File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/AES_CONTROL.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
+    Info (12023): Found entity 1: testbench File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/testbench.sv Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at AES.sv(66): instance has no name File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/AES.sv Line: 66
+Info (12127): Elaborating entity "AES" for the top level hierarchy
+Error (10207): Verilog HDL error at AES.sv(64): can't resolve reference to object "in" File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/AES.sv Line: 64
+Error (10207): Verilog HDL error at AES.sv(64): can't resolve reference to object "out" File: //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/AES.sv Line: 64
+Error (12153): Can't elaborate top-level user hierarchy
+Info (144001): Generated suppressed messages file //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/Lab9.map.smsg
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 3 errors, 2 warnings
+    Error: Peak virtual memory: 4736 megabytes
+    Error: Processing ended: Mon Apr 01 23:17:27 2019
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:23
+
+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in //ad.uillinois.edu/engr-ews/sohammk2/Desktop/Lab_9/Lab9_Avalon_Provided_2.0/Lab9.map.smsg.
+
+

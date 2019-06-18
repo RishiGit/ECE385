@@ -1,0 +1,568 @@
+Analysis & Synthesis report for Lab_6
+Sat Mar 02 23:21:41 2019
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |lab6_toplevel|slc3:my_slc|ISDU:state_controller|State
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: slc3:my_slc|tristate:tr0
+ 14. Parameter Settings for User Entity Instance: test_memory:my_test_memory
+ 15. Parameter Settings for User Entity Instance: test_memory:my_test_memory|memory_parser:parser
+ 16. Port Connectivity Checks: "slc3:my_slc|Mem2IO:memory_subsystem"
+ 17. Port Connectivity Checks: "slc3:my_slc|datapath:d0|mux_ADDR2:ADDR2MUXX"
+ 18. Port Connectivity Checks: "slc3:my_slc|datapath:d0"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Mar 02 23:21:41 2019       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; Lab_6                                       ;
+; Top-level Entity Name              ; lab6_toplevel                               ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 769                                         ;
+;     Total combinational functions  ; 593                                         ;
+;     Dedicated logic registers      ; 280                                         ;
+; Total registers                    ; 280                                         ;
+; Total pins                         ; 129                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; lab6_toplevel      ; Lab_6              ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
+; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/rjaud/Documents/385/Lab6/Sohammk2/ALU.sv             ;         ;
+; tristate.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/rjaud/Documents/385/Lab6/Sohammk2/tristate.sv        ;         ;
+; test_memory.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/rjaud/Documents/385/Lab6/Sohammk2/test_memory.sv     ;         ;
+; SLC3_2.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/rjaud/Documents/385/Lab6/Sohammk2/SLC3_2.sv          ;         ;
+; slc3.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/rjaud/Documents/385/Lab6/Sohammk2/slc3.sv            ;         ;
+; memory_contents.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/rjaud/Documents/385/Lab6/Sohammk2/memory_contents.sv ;         ;
+; Mem2IO.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/rjaud/Documents/385/Lab6/Sohammk2/Mem2IO.sv          ;         ;
+; lab6_toplevel.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/rjaud/Documents/385/Lab6/Sohammk2/lab6_toplevel.sv   ;         ;
+; ISDU.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/rjaud/Documents/385/Lab6/Sohammk2/ISDU.sv            ;         ;
+; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/rjaud/Documents/385/Lab6/Sohammk2/datapath.sv        ;         ;
+; registers.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/rjaud/Documents/385/Lab6/Sohammk2/registers.sv       ;         ;
+; muxes.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/rjaud/Documents/385/Lab6/Sohammk2/muxes.sv           ;         ;
+; HexDriver.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/rjaud/Documents/385/Lab6/Sohammk2/HexDriver.sv       ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 769       ;
+;                                             ;           ;
+; Total combinational functions               ; 593       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 413       ;
+;     -- 3 input functions                    ; 99        ;
+;     -- <=2 input functions                  ; 81        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 548       ;
+;     -- arithmetic mode                      ; 45        ;
+;                                             ;           ;
+; Total registers                             ; 280       ;
+;     -- Dedicated logic registers            ; 280       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 129       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; Clk~input ;
+; Maximum fan-out                             ; 280       ;
+; Total fan-out                               ; 3195      ;
+; Average fan-out                             ; 2.79      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                    ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                        ; Entity Name   ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+---------------+--------------+
+; |lab6_toplevel                  ; 593 (0)             ; 280 (0)                   ; 0           ; 0            ; 0       ; 0         ; 129  ; 0            ; |lab6_toplevel                                             ; lab6_toplevel ; work         ;
+;    |slc3:my_slc|                ; 593 (0)             ; 280 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc                                 ; slc3          ; work         ;
+;       |HexDriver:hex_driver0|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver0           ; HexDriver     ; work         ;
+;       |HexDriver:hex_driver1|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver1           ; HexDriver     ; work         ;
+;       |HexDriver:hex_driver2|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver2           ; HexDriver     ; work         ;
+;       |HexDriver:hex_driver3|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver3           ; HexDriver     ; work         ;
+;       |HexDriver:hex_driver4|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver4           ; HexDriver     ; work         ;
+;       |HexDriver:hex_driver5|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver5           ; HexDriver     ; work         ;
+;       |HexDriver:hex_driver6|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver6           ; HexDriver     ; work         ;
+;       |HexDriver:hex_driver7|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver7           ; HexDriver     ; work         ;
+;       |ISDU:state_controller|   ; 45 (45)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|ISDU:state_controller           ; ISDU          ; work         ;
+;       |Mem2IO:memory_subsystem| ; 22 (22)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|Mem2IO:memory_subsystem         ; Mem2IO        ; work         ;
+;       |datapath:d0|             ; 470 (34)            ; 208 (12)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0                     ; datapath      ; work         ;
+;          |ALU:ALUU|             ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|ALU:ALUU            ; ALU           ; work         ;
+;          |NZP:NZPLOGIC|         ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|NZP:NZPLOGIC        ; NZP           ; work         ;
+;          |eightreg_16:REGFILE|  ; 94 (94)             ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|eightreg_16:REGFILE ; eightreg_16   ; work         ;
+;          |flip_flop:BENN|       ; 3 (3)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|flip_flop:BENN      ; flip_flop     ; work         ;
+;          |mux_ADDR1:ADDR1MUXX|  ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|mux_ADDR1:ADDR1MUXX ; mux_ADDR1     ; work         ;
+;          |mux_ADDR2:ADDR2MUXX|  ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|mux_ADDR2:ADDR2MUXX ; mux_ADDR2     ; work         ;
+;          |mux_GATES:GATEMUX|    ; 119 (119)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|mux_GATES:GATEMUX   ; mux_GATES     ; work         ;
+;          |mux_SR1:SR1MUXX|      ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|mux_SR1:SR1MUXX     ; mux_SR1       ; work         ;
+;          |mux_SR2:SR2MUXX|      ; 96 (96)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|mux_SR2:SR2MUXX     ; mux_SR2       ; work         ;
+;          |reg_16:IRREG|         ; 1 (1)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|reg_16:IRREG        ; reg_16        ; work         ;
+;          |reg_16:MARREG|        ; 18 (18)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|reg_16:MARREG       ; reg_16        ; work         ;
+;          |reg_16:MDRREG|        ; 35 (35)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|reg_16:MDRREG       ; reg_16        ; work         ;
+;          |reg_16:PCREG|         ; 18 (18)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|reg_16:PCREG        ; reg_16        ; work         ;
+;       |tristate:tr0|            ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|tristate:tr0                    ; tristate      ; work         ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |lab6_toplevel|slc3:my_slc|ISDU:state_controller|State                                                                                                                                                                                                                                                                                                                     ;
++----------------+------------+--------------+--------------+--------------+--------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+--------------+--------------+------------+----------------+--------------+--------------+----------------+--------------+
+; Name           ; State.S_27 ; State.S_25_2 ; State.S_25_1 ; State.S_16_2 ; State.S_16_1 ; State.S_23 ; State.S_21 ; State.S_12 ; State.S_22 ; State.S_00 ; State.S_04 ; State.S_07 ; State.S_06 ; State.S_09 ; State.S_05 ; State.S_01 ; State.S_32 ; State.S_35 ; State.S_33_2 ; State.S_33_1 ; State.S_18 ; State.PauseIR2 ; State.Pause2 ; State.Pause1 ; State.PauseIR1 ; State.Halted ;
++----------------+------------+--------------+--------------+--------------+--------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+--------------+--------------+------------+----------------+--------------+--------------+----------------+--------------+
+; State.Halted   ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 0            ;
+; State.PauseIR1 ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 1              ; 1            ;
+; State.Pause1   ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 1            ; 0              ; 1            ;
+; State.Pause2   ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 1            ; 0            ; 0              ; 1            ;
+; State.PauseIR2 ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 1              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_18     ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 1          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_33_1   ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 1            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_33_2   ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_35     ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_32     ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_01     ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_05     ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_09     ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_06     ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_07     ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_04     ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_00     ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_22     ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_12     ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_21     ; 0          ; 0            ; 0            ; 0            ; 0            ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_23     ; 0          ; 0            ; 0            ; 0            ; 0            ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_16_1   ; 0          ; 0            ; 0            ; 0            ; 1            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_16_2   ; 0          ; 0            ; 0            ; 1            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_25_1   ; 0          ; 0            ; 1            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_25_2   ; 0          ; 1            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
+; State.S_27     ; 1          ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0            ; 0            ; 0              ; 1            ;
++----------------+------------+--------------+--------------+--------------+--------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+--------------+--------------+------------+----------------+--------------+--------------+----------------+--------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                        ;
++--------------------------------------------------+----------------------------------------+
+; Register name                                    ; Reason for Removal                     ;
++--------------------------------------------------+----------------------------------------+
+; slc3:my_slc|ISDU:state_controller|State~2        ; Lost fanout                            ;
+; slc3:my_slc|ISDU:state_controller|State~3        ; Lost fanout                            ;
+; slc3:my_slc|ISDU:state_controller|State~4        ; Lost fanout                            ;
+; slc3:my_slc|ISDU:state_controller|State~5        ; Lost fanout                            ;
+; slc3:my_slc|ISDU:state_controller|State~6        ; Lost fanout                            ;
+; slc3:my_slc|ISDU:state_controller|State.PauseIR1 ; Stuck at GND due to stuck port data_in ;
+; slc3:my_slc|ISDU:state_controller|State.PauseIR2 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 7            ;                                        ;
++--------------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                     ;
++--------------------------------------------------+---------------------------+--------------------------------------------------+
+; Register name                                    ; Reason for Removal        ; Registers Removed due to This Register           ;
++--------------------------------------------------+---------------------------+--------------------------------------------------+
+; slc3:my_slc|ISDU:state_controller|State.PauseIR1 ; Stuck at GND              ; slc3:my_slc|ISDU:state_controller|State.PauseIR2 ;
+;                                                  ; due to stuck port data_in ;                                                  ;
++--------------------------------------------------+---------------------------+--------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 280   ;
+; Number of registers using Synchronous Clear  ; 19    ;
+; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 211   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|reg_16:IRREG|Data_Out[7]        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|Mem2IO:memory_subsystem|hex_data[4]         ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|reg_16:MARREG|Data_Out[0]       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|eightreg_16:REGFILE|regs[0][6]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|eightreg_16:REGFILE|regs[1][1]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|eightreg_16:REGFILE|regs[2][6]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|eightreg_16:REGFILE|regs[3][13] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|eightreg_16:REGFILE|regs[4][6]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|eightreg_16:REGFILE|regs[5][15] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|eightreg_16:REGFILE|regs[6][3]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|eightreg_16:REGFILE|regs[7][3]  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|reg_16:PCREG|Data_Out[2]        ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|reg_16:MDRREG|Data_Out[6]       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |lab6_toplevel|slc3:my_slc|datapath:d0|mux_ADDR2:ADDR2MUXX|Mux6        ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |lab6_toplevel|slc3:my_slc|datapath:d0|eightreg_16:REGFILE|Mux9        ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |lab6_toplevel|slc3:my_slc|datapath:d0|mux_SR2:SR2MUXX|Out[8]          ;
+; 19:1               ; 16 bits   ; 192 LEs       ; 96 LEs               ; 96 LEs                 ; No         ; |lab6_toplevel|slc3:my_slc|datapath:d0|mux_GATES:GATEMUX|Mux1          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|tristate:tr0 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; N              ; 16    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test_memory:my_test_memory ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; size           ; 256   ; Signed Integer                                 ;
+; init_external  ; 0     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test_memory:my_test_memory|memory_parser:parser ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; size           ; 256   ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|Mem2IO:memory_subsystem" ;
++--------------+-------+----------+-------------------------------+
+; Port         ; Type  ; Severity ; Details                       ;
++--------------+-------+----------+-------------------------------+
+; ADDR[19..16] ; Input ; Info     ; Stuck at GND                  ;
++--------------+-------+----------+-------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|mux_ADDR2:ADDR2MUXX" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; A    ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0"                                                                 ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; IR[10..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; IR[4..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 129                         ;
+; cycloneiii_ff         ; 280                         ;
+;     ENA               ; 195                         ;
+;     ENA SCLR SLD      ; 16                          ;
+;     SCLR              ; 3                           ;
+;     plain             ; 66                          ;
+; cycloneiii_io_obuf    ; 16                          ;
+; cycloneiii_lcell_comb ; 604                         ;
+;     arith             ; 45                          ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 30                          ;
+;     normal            ; 559                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 65                          ;
+;         3 data inputs ; 69                          ;
+;         4 data inputs ; 413                         ;
+;                       ;                             ;
+; Max LUT depth         ; 12.50                       ;
+; Average LUT depth     ; 6.78                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Sat Mar 02 23:20:52 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab_6 -c Lab_6
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: ALU File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/ALU.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tristate.sv
+    Info (12023): Found entity 1: tristate File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/tristate.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file test_memory.sv
+    Info (12023): Found entity 1: test_memory File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/test_memory.sv Line: 22
+Info (12021): Found 1 design units, including 0 entities, in source file slc3_2.sv
+    Info (12022): Found design unit 1: SLC3_2 (SystemVerilog) File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/SLC3_2.sv Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file slc3.sv
+    Info (12023): Found entity 1: slc3 File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/slc3.sv Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file memory_contents.sv
+    Info (12023): Found entity 1: memory_parser File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/memory_contents.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file mem2io.sv
+    Info (12023): Found entity 1: Mem2IO File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/Mem2IO.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file lab6_toplevel.sv
+    Info (12023): Found entity 1: lab6_toplevel File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/lab6_toplevel.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file isdu.sv
+    Info (12023): Found entity 1: ISDU File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/ISDU.sv Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
+    Info (12023): Found entity 1: datapath File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/datapath.sv Line: 1
+Info (12021): Found 5 design units, including 5 entities, in source file registers.sv
+    Info (12023): Found entity 1: reg_8 File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/registers.sv Line: 1
+    Info (12023): Found entity 2: reg_4 File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/registers.sv Line: 25
+    Info (12023): Found entity 3: reg_16 File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/registers.sv Line: 49
+    Info (12023): Found entity 4: eightreg_16 File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/registers.sv Line: 73
+    Info (12023): Found entity 5: flip_flop File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/registers.sv Line: 158
+Info (12021): Found 9 design units, including 9 entities, in source file muxes.sv
+    Info (12023): Found entity 1: mux_PC File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/muxes.sv Line: 1
+    Info (12023): Found entity 2: mux_MDR File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/muxes.sv Line: 20
+    Info (12023): Found entity 3: mux_GATES File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/muxes.sv Line: 35
+    Info (12023): Found entity 4: mux_ADDR2 File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/muxes.sv Line: 56
+    Info (12023): Found entity 5: mux_ADDR1 File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/muxes.sv Line: 77
+    Info (12023): Found entity 6: mux_DR File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/muxes.sv Line: 94
+    Info (12023): Found entity 7: mux_SR1 File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/muxes.sv Line: 108
+    Info (12023): Found entity 8: mux_SR2 File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/muxes.sv Line: 122
+    Info (12023): Found entity 9: NZP File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/muxes.sv Line: 137
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
+    Info (12023): Found entity 1: testbench File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/testbench.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
+    Info (12023): Found entity 1: HexDriver File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/HexDriver.sv Line: 1
+Info (12127): Elaborating entity "lab6_toplevel" for the top level hierarchy
+Info (12128): Elaborating entity "slc3" for hierarchy "slc3:my_slc" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/lab6_toplevel.sv Line: 18
+Info (12128): Elaborating entity "HexDriver" for hierarchy "slc3:my_slc|HexDriver:hex_driver3" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/slc3.sv Line: 58
+Info (12128): Elaborating entity "datapath" for hierarchy "slc3:my_slc|datapath:d0" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/slc3.sv Line: 77
+Info (12128): Elaborating entity "mux_PC" for hierarchy "slc3:my_slc|datapath:d0|mux_PC:PCMUXX" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/datapath.sv Line: 27
+Info (12128): Elaborating entity "mux_MDR" for hierarchy "slc3:my_slc|datapath:d0|mux_MDR:MDRMUXX" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/datapath.sv Line: 28
+Info (12128): Elaborating entity "reg_16" for hierarchy "slc3:my_slc|datapath:d0|reg_16:MARREG" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/datapath.sv Line: 32
+Info (12128): Elaborating entity "mux_ADDR1" for hierarchy "slc3:my_slc|datapath:d0|mux_ADDR1:ADDR1MUXX" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/datapath.sv Line: 44
+Info (12128): Elaborating entity "mux_ADDR2" for hierarchy "slc3:my_slc|datapath:d0|mux_ADDR2:ADDR2MUXX" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/datapath.sv Line: 45
+Info (12128): Elaborating entity "mux_DR" for hierarchy "slc3:my_slc|datapath:d0|mux_DR:DRMUXX" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/datapath.sv Line: 49
+Info (12128): Elaborating entity "mux_SR1" for hierarchy "slc3:my_slc|datapath:d0|mux_SR1:SR1MUXX" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/datapath.sv Line: 50
+Info (12128): Elaborating entity "mux_SR2" for hierarchy "slc3:my_slc|datapath:d0|mux_SR2:SR2MUXX" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/datapath.sv Line: 51
+Info (12128): Elaborating entity "eightreg_16" for hierarchy "slc3:my_slc|datapath:d0|eightreg_16:REGFILE" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/datapath.sv Line: 52
+Info (12128): Elaborating entity "ALU" for hierarchy "slc3:my_slc|datapath:d0|ALU:ALUU" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/datapath.sv Line: 53
+Info (12128): Elaborating entity "NZP" for hierarchy "slc3:my_slc|datapath:d0|NZP:NZPLOGIC" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/datapath.sv Line: 55
+Info (12128): Elaborating entity "flip_flop" for hierarchy "slc3:my_slc|datapath:d0|flip_flop:BENN" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/datapath.sv Line: 56
+Info (12128): Elaborating entity "mux_GATES" for hierarchy "slc3:my_slc|datapath:d0|mux_GATES:GATEMUX" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/datapath.sv Line: 57
+Info (10264): Verilog HDL Case Statement information at muxes.sv(41): all case item expressions in this case statement are onehot File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/muxes.sv Line: 41
+Info (12128): Elaborating entity "Mem2IO" for hierarchy "slc3:my_slc|Mem2IO:memory_subsystem" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/slc3.sv Line: 85
+Info (12128): Elaborating entity "tristate" for hierarchy "slc3:my_slc|tristate:tr0" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/slc3.sv Line: 90
+Info (12128): Elaborating entity "ISDU" for hierarchy "slc3:my_slc|ISDU:state_controller" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/slc3.sv Line: 97
+Info (12128): Elaborating entity "test_memory" for hierarchy "test_memory:my_test_memory" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/lab6_toplevel.sv Line: 22
+Warning (10036): Verilog HDL or VHDL warning at test_memory.sv(42): object "actual_address" assigned a value but never read File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/test_memory.sv Line: 42
+Info (12128): Elaborating entity "memory_parser" for hierarchy "test_memory:my_test_memory|memory_parser:parser" File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/test_memory.sv Line: 48
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "CE" is stuck at GND File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/lab6_toplevel.sv Line: 14
+    Warning (13410): Pin "UB" is stuck at GND File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/lab6_toplevel.sv Line: 14
+    Warning (13410): Pin "LB" is stuck at GND File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/lab6_toplevel.sv Line: 14
+    Warning (13410): Pin "ADDR[16]" is stuck at GND File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[17]" is stuck at GND File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[18]" is stuck at GND File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[19]" is stuck at GND File: C:/Users/rjaud/Documents/385/Lab6/Sohammk2/lab6_toplevel.sv Line: 15
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/rjaud/Documents/385/Lab6/Sohammk2/output_files/Lab_6.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 915 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
+    Info (21059): Implemented 93 output pins
+    Info (21060): Implemented 16 bidirectional pins
+    Info (21061): Implemented 786 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4808 megabytes
+    Info: Processing ended: Sat Mar 02 23:21:41 2019
+    Info: Elapsed time: 00:00:49
+    Info: Total CPU time (on all processors): 00:01:10
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/rjaud/Documents/385/Lab6/Sohammk2/output_files/Lab_6.map.smsg.
+
+

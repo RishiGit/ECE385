@@ -1,0 +1,28 @@
+module Processor (input logic clk,
+										reset,
+										run,
+										clr_ld,
+										extendbit,
+						input logic [7:0] S,				// DEBUG
+                  output logic [7:0]  Aval,    // DEBUG
+                                Bval,    // DEBUG
+                  output logic [6:0]  AhexL,
+                                AhexU,
+                                BhexL,
+                                BhexU);
+	 
+	 logic [7:0] A,B;
+	 logic [8:0] extendA;
+	 logic reset_SH, clr_ld_SH,run_SH, bIN, add, sub, clear, shift;
+	 //Instantiation of modules here
+	 register    registerA (
+                        .Clk(clk),
+                        .Reset(clear | Reset_SH),
+                        .Shift_In(extendbit),
+								.Load(),
+								.Shift_En(shift),
+								.D(extendA[7:0]),
+								.Shift_Out(bIN),
+								.Data_Out(A));//note these are inferred assignments, because of the existence a logic variable of the same name
+                        
+		

@@ -1,0 +1,18 @@
+module mux_INSRT(input logic [127:0] ISR,ISB,ARK,MC,
+				  input logic [1:0] S,
+				  output logic [127:0] Out);
+		
+		always_comb
+			begin
+				case(S)
+					1'b00:
+						Out = ISR;
+					1'b01:
+						Out = ISB;
+					1'b10:
+						Out = ARK;
+					1'b11:
+						Out = MC;
+				endcase
+			end
+endmodule

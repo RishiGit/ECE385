@@ -1,0 +1,218 @@
+# Reading C:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# do Lab_6_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+U:/Desktop/lab6/Sohammk2 {U:/Desktop/lab6/Sohammk2/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:45:26 on Feb 28,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+U:/Desktop/lab6/Sohammk2" U:/Desktop/lab6/Sohammk2/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 00:45:26 on Feb 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+U:/Desktop/lab6/Sohammk2 {U:/Desktop/lab6/Sohammk2/tristate.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:45:26 on Feb 28,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+U:/Desktop/lab6/Sohammk2" U:/Desktop/lab6/Sohammk2/tristate.sv 
+# -- Compiling module tristate
+# 
+# Top level modules:
+# 	tristate
+# End time: 00:45:26 on Feb 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+U:/Desktop/lab6/Sohammk2 {U:/Desktop/lab6/Sohammk2/test_memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:45:26 on Feb 28,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+U:/Desktop/lab6/Sohammk2" U:/Desktop/lab6/Sohammk2/test_memory.sv 
+# -- Compiling module test_memory
+# 
+# Top level modules:
+# 	test_memory
+# End time: 00:45:26 on Feb 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+U:/Desktop/lab6/Sohammk2 {U:/Desktop/lab6/Sohammk2/SLC3_2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:45:26 on Feb 28,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+U:/Desktop/lab6/Sohammk2" U:/Desktop/lab6/Sohammk2/SLC3_2.sv 
+# -- Compiling package SLC3_2
+# 
+# Top level modules:
+# 	--none--
+# End time: 00:45:26 on Feb 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+U:/Desktop/lab6/Sohammk2 {U:/Desktop/lab6/Sohammk2/Mem2IO.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:45:26 on Feb 28,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+U:/Desktop/lab6/Sohammk2" U:/Desktop/lab6/Sohammk2/Mem2IO.sv 
+# -- Compiling module Mem2IO
+# 
+# Top level modules:
+# 	Mem2IO
+# End time: 00:45:27 on Feb 28,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+U:/Desktop/lab6/Sohammk2 {U:/Desktop/lab6/Sohammk2/ISDU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:45:27 on Feb 28,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+U:/Desktop/lab6/Sohammk2" U:/Desktop/lab6/Sohammk2/ISDU.sv 
+# -- Compiling module ISDU
+# 
+# Top level modules:
+# 	ISDU
+# End time: 00:45:27 on Feb 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+U:/Desktop/lab6/Sohammk2 {U:/Desktop/lab6/Sohammk2/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:45:27 on Feb 28,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+U:/Desktop/lab6/Sohammk2" U:/Desktop/lab6/Sohammk2/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 00:45:27 on Feb 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+U:/Desktop/lab6/Sohammk2 {U:/Desktop/lab6/Sohammk2/registers.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:45:27 on Feb 28,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+U:/Desktop/lab6/Sohammk2" U:/Desktop/lab6/Sohammk2/registers.sv 
+# -- Compiling module reg_8
+# -- Compiling module reg_4
+# -- Compiling module reg_16
+# -- Compiling module eightreg_16
+# -- Compiling module flip_flop
+# 
+# Top level modules:
+# 	reg_8
+# 	reg_4
+# 	reg_16
+# 	eightreg_16
+# 	flip_flop
+# End time: 00:45:27 on Feb 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+U:/Desktop/lab6/Sohammk2 {U:/Desktop/lab6/Sohammk2/muxes.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:45:27 on Feb 28,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+U:/Desktop/lab6/Sohammk2" U:/Desktop/lab6/Sohammk2/muxes.sv 
+# -- Compiling module mux_PC
+# -- Compiling module mux_MDR
+# -- Compiling module mux_GATES
+# -- Compiling module mux_ADDR2
+# -- Compiling module mux_ADDR1
+# -- Compiling module mux_DR
+# -- Compiling module mux_SR1
+# -- Compiling module mux_SR2
+# -- Compiling module NZP
+# 
+# Top level modules:
+# 	mux_PC
+# 	mux_MDR
+# 	mux_GATES
+# 	mux_ADDR2
+# 	mux_ADDR1
+# 	mux_DR
+# 	mux_SR1
+# 	mux_SR2
+# 	NZP
+# End time: 00:45:27 on Feb 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+U:/Desktop/lab6/Sohammk2 {U:/Desktop/lab6/Sohammk2/HexDriver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:45:28 on Feb 28,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+U:/Desktop/lab6/Sohammk2" U:/Desktop/lab6/Sohammk2/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 00:45:28 on Feb 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+U:/Desktop/lab6/Sohammk2 {U:/Desktop/lab6/Sohammk2/slc3.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:45:28 on Feb 28,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+U:/Desktop/lab6/Sohammk2" U:/Desktop/lab6/Sohammk2/slc3.sv 
+# -- Compiling module slc3
+# 
+# Top level modules:
+# 	slc3
+# End time: 00:45:28 on Feb 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+U:/Desktop/lab6/Sohammk2 {U:/Desktop/lab6/Sohammk2/memory_contents.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:45:28 on Feb 28,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+U:/Desktop/lab6/Sohammk2" U:/Desktop/lab6/Sohammk2/memory_contents.sv 
+# -- Compiling package memory_contents_sv_unit
+# -- Importing package SLC3_2
+# -- Compiling module memory_parser
+# 
+# Top level modules:
+# 	memory_parser
+# End time: 00:45:28 on Feb 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+U:/Desktop/lab6/Sohammk2 {U:/Desktop/lab6/Sohammk2/lab6_toplevel.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:45:28 on Feb 28,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+U:/Desktop/lab6/Sohammk2" U:/Desktop/lab6/Sohammk2/lab6_toplevel.sv 
+# -- Compiling module lab6_toplevel
+# 
+# Top level modules:
+# 	lab6_toplevel
+# End time: 00:45:28 on Feb 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+U:/Desktop/lab6/Sohammk2 {U:/Desktop/lab6/Sohammk2/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:45:28 on Feb 28,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+U:/Desktop/lab6/Sohammk2" U:/Desktop/lab6/Sohammk2/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 00:45:28 on Feb 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
+# Start time: 00:45:28 on Feb 28,2019
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.lab6_toplevel
+# Loading work.slc3
+# Loading work.HexDriver
+# Loading work.datapath
+# Loading work.mux_PC
+# Loading work.mux_MDR
+# Loading work.reg_16
+# Loading work.mux_ADDR1
+# Loading work.mux_ADDR2
+# Loading work.mux_DR
+# Loading work.mux_SR1
+# Loading work.mux_SR2
+# Loading work.eightreg_16
+# Loading work.ALU
+# Loading work.NZP
+# Loading work.flip_flop
+# Loading work.mux_GATES
+# Loading work.Mem2IO
+# Loading work.tristate
+# Loading work.ISDU
+# Loading work.test_memory
+# Loading work.SLC3_2
+# Loading work.memory_contents_sv_unit
+# Loading work.memory_parser
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 2000 ns
+# End time: 00:46:28 on Feb 28,2019, Elapsed time: 0:01:00
+# Errors: 0, Warnings: 0

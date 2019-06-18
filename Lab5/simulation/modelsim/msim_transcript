@@ -1,0 +1,136 @@
+# Reading C:/intelFPGA/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# do Multiplier_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/lab5 {C:/Users/rjaud/Documents/385/lab5/ninebra.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:39:39 on Feb 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/lab5" C:/Users/rjaud/Documents/385/lab5/ninebra.sv 
+# -- Compiling module ninebra
+# -- Compiling module fulladder
+# 
+# Top level modules:
+# 	ninebra
+# End time: 18:39:40 on Feb 18,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/lab5 {C:/Users/rjaud/Documents/385/lab5/control.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:39:40 on Feb 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/lab5" C:/Users/rjaud/Documents/385/lab5/control.sv 
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# End time: 18:39:40 on Feb 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/lab5 {C:/Users/rjaud/Documents/385/lab5/register.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:39:40 on Feb 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/lab5" C:/Users/rjaud/Documents/385/lab5/register.sv 
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# End time: 18:39:40 on Feb 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/lab5 {C:/Users/rjaud/Documents/385/lab5/Synchronizers.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:39:40 on Feb 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/lab5" C:/Users/rjaud/Documents/385/lab5/Synchronizers.sv 
+# -- Compiling module sync
+# -- Compiling module sync_r0
+# -- Compiling module sync_r1
+# 
+# Top level modules:
+# 	sync
+# 	sync_r0
+# 	sync_r1
+# End time: 18:39:40 on Feb 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/lab5 {C:/Users/rjaud/Documents/385/lab5/HexDriver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:39:41 on Feb 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/lab5" C:/Users/rjaud/Documents/385/lab5/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 18:39:41 on Feb 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/lab5 {C:/Users/rjaud/Documents/385/lab5/flip_flop.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:39:41 on Feb 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/lab5" C:/Users/rjaud/Documents/385/lab5/flip_flop.sv 
+# -- Compiling module flip_flop
+# 
+# Top level modules:
+# 	flip_flop
+# End time: 18:39:41 on Feb 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/lab5 {C:/Users/rjaud/Documents/385/lab5/Processor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:39:41 on Feb 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/lab5" C:/Users/rjaud/Documents/385/lab5/Processor.sv 
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# End time: 18:39:41 on Feb 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/lab5 {C:/Users/rjaud/Documents/385/lab5/testbench_8.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:39:41 on Feb 18,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/lab5" C:/Users/rjaud/Documents/385/lab5/testbench_8.sv 
+# -- Compiling module testbench_8
+# ** Warning: C:/Users/rjaud/Documents/385/lab5/testbench_8.sv(68): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/rjaud/Documents/385/lab5/testbench_8.sv(76): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/rjaud/Documents/385/lab5/testbench_8.sv(89): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/rjaud/Documents/385/lab5/testbench_8.sv(94): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/rjaud/Documents/385/lab5/testbench_8.sv(104): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/rjaud/Documents/385/lab5/testbench_8.sv(107): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/rjaud/Documents/385/lab5/testbench_8.sv(112): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/rjaud/Documents/385/lab5/testbench_8.sv(112): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/rjaud/Documents/385/lab5/testbench_8.sv(122): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	testbench_8
+# End time: 18:39:41 on Feb 18,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 9
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench_8
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench_8 
+# Start time: 18:39:42 on Feb 18,2019
+# Loading sv_std.std
+# Loading work.testbench_8
+# Loading work.Processor
+# Loading work.ninebra
+# Loading work.fulladder
+# Loading work.flip_flop
+# Loading work.register
+# Loading work.control
+# Loading work.HexDriver
+# Loading work.sync
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 10 us
+# ** Warning: (vsim-8315) C:/Users/rjaud/Documents/385/lab5/control.sv(37): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_8/processor0/controllogic
+# Success!
+# A bookmark named "bookmark0" has been added for window "Wave"
+# A bookmark named "bookmark1" has been added for window "Wave"
+# All bookmarks have been removed for window "Wave"
+# End time: 19:41:16 on Feb 18,2019, Elapsed time: 1:01:34
+# Errors: 0, Warnings: 1

@@ -1,0 +1,215 @@
+# Reading C:/intelFPGA/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# do lab_9_run_msim_rtl_systemverilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9 {C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:29:25 on Apr 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9" C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv 
+# -- Compiling module four_one
+# -- Compiling module four_one32
+# -- Compiling module one_four32
+# -- Compiling module counter
+# -- Compiling module rcounter
+# -- Compiling module keycounter
+# 
+# Top level modules:
+# 	four_one
+# 	four_one32
+# 	one_four32
+# 	counter
+# 	rcounter
+# 	keycounter
+# End time: 15:29:25 on Apr 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9 {C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES_CONTROL.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:29:25 on Apr 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9" C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES_CONTROL.sv 
+# -- Compiling module AES_CONTROL
+# 
+# Top level modules:
+# 	AES_CONTROL
+# End time: 15:29:25 on Apr 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9 {C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/SubBytes.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:29:25 on Apr 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9" C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/SubBytes.sv 
+# -- Compiling module SubBytes
+# -- Compiling module InvSubBytes
+# -- Compiling module InvSubMsg
+# 
+# Top level modules:
+# 	SubBytes
+# 	InvSubMsg
+# End time: 15:29:25 on Apr 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9 {C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/InvShiftRows.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:29:25 on Apr 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9" C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/InvShiftRows.sv 
+# -- Compiling module InvShiftRows
+# 
+# Top level modules:
+# 	InvShiftRows
+# End time: 15:29:26 on Apr 12,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9 {C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/InvMixColumns.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:29:26 on Apr 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9" C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/InvMixColumns.sv 
+# -- Compiling module InvMixColumns
+# -- Compiling package InvMixColumns_sv_unit
+# -- Compiling module GF_Mul_9
+# -- Compiling module GF_Mul_b
+# -- Compiling module GF_Mul_d
+# -- Compiling module GF_Mul_e
+# 
+# Top level modules:
+# 	InvMixColumns
+# End time: 15:29:26 on Apr 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9 {C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:29:26 on Apr 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9" C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv 
+# -- Compiling module AES
+# 
+# Top level modules:
+# 	AES
+# End time: 15:29:26 on Apr 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9 {C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/registers.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:29:26 on Apr 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9" C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/registers.sv 
+# -- Compiling module REGS
+# -- Compiling module reg_8
+# -- Compiling module reg_4
+# -- Compiling module reg_16
+# -- Compiling module reg_128
+# -- Compiling module eightreg_16
+# -- Compiling module flip_flop
+# 
+# Top level modules:
+# 	REGS
+# 	reg_8
+# 	reg_4
+# 	reg_16
+# 	reg_128
+# 	eightreg_16
+# 	flip_flop
+# End time: 15:29:27 on Apr 12,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9 {C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/KeyExpansion.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:29:27 on Apr 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9" C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/KeyExpansion.sv 
+# -- Compiling module KeyExpansion
+# -- Compiling module KeyExpansionOne
+# -- Compiling module AddRoundKey
+# 
+# Top level modules:
+# 	KeyExpansion
+# 	AddRoundKey
+# End time: 15:29:27 on Apr 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlib lab8_soc
+# ** Warning: (vlib-34) Library already exists at "lab8_soc".
+# vmap lab8_soc lab8_soc
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap lab8_soc lab8_soc 
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9 {C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:29:27 on Apr 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9" C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:29:27 on Apr 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L lab8_soc -voptargs="+acc"  testbench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L lab8_soc -voptargs=""+acc"" testbench 
+# Start time: 15:29:30 on Apr 12,2019
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.AES
+# Loading work.reg_128
+# Loading work.keycounter
+# Loading work.KeyExpansion
+# Loading work.KeyExpansionOne
+# Loading work.SubBytes
+# Loading work.InvShiftRows
+# Loading work.InvSubMsg
+# Loading work.InvSubBytes
+# Loading work.rcounter
+# Loading work.AddRoundKey
+# Loading work.counter
+# Loading work.four_one32
+# Loading work.InvMixColumns
+# Loading work.InvMixColumns_sv_unit
+# Loading work.GF_Mul_9
+# Loading work.GF_Mul_b
+# Loading work.GF_Mul_d
+# Loading work.GF_Mul_e
+# Loading work.one_four32
+# Loading work.four_one
+# Loading work.AES_CONTROL
+# ** Warning: (vsim-3017) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(56): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a/round_c File: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv
+# ** Warning: (vsim-3722) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(56): [TFMPC] - Missing connection for port 'in'.
+# ** Warning: (vsim-3017) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(60): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a/c_2 File: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv
+# ** Warning: (vsim-3722) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(60): [TFMPC] - Missing connection for port 'in'.
+# ** Warning: (vsim-3015) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(61): [PCDPC] - Port size (2) does not match connection size (4) for port 'S'. The port definition is at: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv(21).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a/MC_MUX File: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv
+# ** Warning: (vsim-3015) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(63): [PCDPC] - Port size (2) does not match connection size (4) for port 'S'. The port definition is at: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv(40).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a/decoder File: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv
+# ** Warning: (vsim-3017) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(70): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a/c_1 File: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv
+# ** Warning: (vsim-3722) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(70): [TFMPC] - Missing connection for port 'in'.
+# ** Warning: (vsim-3015) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(71): [PCDPC] - Port size (2) does not match connection size (4) for port 'S'. The port definition is at: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a/INSTR_MUX File: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 3000 ns
+add wave -position insertpoint  \
+sim:/testbench/a/controller/State
+add wave -position insertpoint  \
+sim:/testbench/a/controller/Next_state
+restart -f
+# ** Warning: (vsim-3017) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(56): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a/round_c File: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv
+# ** Warning: (vsim-3722) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(56): [TFMPC] - Missing connection for port 'in'.
+# ** Warning: (vsim-3017) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(60): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a/c_2 File: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv
+# ** Warning: (vsim-3722) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(60): [TFMPC] - Missing connection for port 'in'.
+# ** Warning: (vsim-3015) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(61): [PCDPC] - Port size (2) does not match connection size (4) for port 'S'. The port definition is at: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv(21).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a/MC_MUX File: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv
+# ** Warning: (vsim-3015) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(63): [PCDPC] - Port size (2) does not match connection size (4) for port 'S'. The port definition is at: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv(40).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a/decoder File: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv
+# ** Warning: (vsim-3017) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(70): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a/c_1 File: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv
+# ** Warning: (vsim-3722) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(70): [TFMPC] - Missing connection for port 'in'.
+# ** Warning: (vsim-3015) C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/AES.sv(71): [PCDPC] - Port size (2) does not match connection size (4) for port 'S'. The port definition is at: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/a/INSTR_MUX File: C:/Users/rjaud/Documents/385/Lab9/labnine/Lab_9/muxes.sv
+run 3000ns
+# End time: 16:57:19 on Apr 12,2019, Elapsed time: 1:27:49
+# Errors: 0, Warnings: 18
