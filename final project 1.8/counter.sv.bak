@@ -1,0 +1,24 @@
+module counter(input logic [7:0] in, 
+					input logic inc, Clk,
+					input logic Reset, 
+					output logic [7:0] out);
+					
+		
+		logic [3:0] temp;
+		
+		always_ff @ (posedge Clk)
+		begin
+			if(inc)
+				out<=temp;
+			else if(Reset)
+				out<= 4'b0000;
+		end
+		
+		always_comb
+		begin
+		if(out==4'b0100)
+			temp = 4'b0000;
+		else
+			temp = out+4'b0001;
+		end		
+endmodule

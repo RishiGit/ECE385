@@ -1,0 +1,17 @@
+module is_killed(input logic [9:0] birdy, pipex, pipey,
+						output logic killed);
+	always_comb
+		begin
+			if((pipex>=10'd280 || pipex<=10'd360))
+			begin
+				if((birdy>=(pipey+10'd40))||(birdy<=(pipey-10'd40)))
+				begin
+					killed = 1'b1;
+				end
+			end
+			else
+			begin
+				killed = 1'b0;
+			end
+		end
+endmodule

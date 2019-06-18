@@ -1,0 +1,67 @@
+IP Upgrade report for lab8
+Mon Mar 11 12:29:30 2019
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. IP Upgrade Summary
+  3. Failed Upgrade IP Components
+  4. IP Upgrade Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; IP Upgrade Summary                                                         ;
++------------------------------+---------------------------------------------+
+; IP Components Upgrade Status ; Failed - Mon Mar 11 12:29:30 2019           ;
+; Quartus Prime Version        ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                ; lab8                                        ;
+; Top-level Entity Name        ; lab8                                        ;
+; Family                       ; Cyclone IV E                                ;
++------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Failed Upgrade IP Components                                                                                                                          ;
++-------------+----------------+---------+----------------------+----------------------+-----------------+----------------------------------------------+
+; Entity Name ; Component Name ; Version ; Original Source File ; Generation File Path ; New Source File ; Message                                      ;
++-------------+----------------+---------+----------------------+----------------------+-----------------+----------------------------------------------+
+; vga_clk     ; ALTPLL         ; 15.0    ; vga_clk.qip          ; vga_clk.v            ;                 ; File vga_clk.v is not a valid variation file ;
++-------------+----------------+---------+----------------------+----------------------+-----------------+----------------------------------------------+
+
+
++---------------------+
+; IP Upgrade Messages ;
++---------------------+
+Error (11901): File vga_clk.v is not a valid variation file
+Error (11133): IP component ALTPLL with file "vga_clk.v" upgrade failed
+Error (23031): Evaluation of Tcl script c:/intelfpga_lite/18.0/quartus/common/tcl/internal/ip_regen/ip_regen.tcl unsuccessful
+Error: Quartus Prime Shell was unsuccessful. 3 errors, 0 warnings
+    Error: Peak virtual memory: 4905 megabytes
+    Error: Processing ended: Mon Mar 11 12:29:30 2019
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:25
+
+

@@ -1,0 +1,112 @@
+module controller(input logic clk,
+						input logic start,
+						output logic done,
+						input logic xpos, //do we even need xpos?
+						input logic ypos, ymin, ymax,
+						output logic iscore,
+						input logic Reset,
+						output logic currentstate,
+						input logic underpipe
+										);
+		
+		
+		//elements for game
+		logic killed;
+		//counter
+		logic [9:0] waiter;
+		logic isw,rsw;
+		counter10 cw(.clk(clk),.in(waiter),.out(waiter),.inc(isw),.Reset(rsw))
+										
+		enum logic[3:0] {halted, start, 
+								alive, dead} state, next_state;
+		assign currentstate = state;						
+		always_ff @ (posedge clk)
+			begin
+				if(Reset)
+					state<=halted;
+				else
+					state<=next_state;
+			end
+		
+		always_comb
+			begin
+				next_state = state;
+				
+				done = 1'b0;
+				resetsw = 1'b0;
+				
+				unique case(state)
+					halted:
+						if(start == 1'b1)
+							next_state = start;
+						else
+							next_state = halted;
+					start:
+						if(startwait==10'b1111111111)
+						begin
+							next_state = alive;
+						end
+						else
+						begin
+							next_state = start;
+						end
+					alive:
+						if(killed == 1'b1)
+							next_state = dead;
+						else
+							next_state = alive;
+					dead:
+						if(waiter == 10'b1111111111)
+						begin
+							next_state = halted;
+						end
+						else
+						begin
+							next_state = dead;
+						end
+					default : next_state = halted;
+				endcase
+				case(state)
+					halted: ;
+					start:
+						begin
+							if(waiter<10'b1111111111)
+								isw = 1'b1;
+							else
+							begin
+								isw = 1'b0;
+								rsw = 1'b1;
+							end
+						end
+					alive:
+						begin
+							if(underpipe==1'b1)
+							begin
+								if(ypos>ymin && ypos<ymax)
+								begin
+									killed = 1'b0;
+								end
+								else
+								begin
+									killed = 1'b1;
+								end
+							end
+						end
+					dead:
+						begin
+							if(waiter<10'b1111111111)
+								isw = 1'b1;
+							else
+							begin
+								isw = 1'b0;
+								rsw = 1'b1;
+							end
+						end
+					default: ;
+				endcase
+			end
+endmodule
+						
+							
+							
+			
